@@ -7,7 +7,7 @@ export const fetchPokemons = (type: string, sort: string, page: number, limit: n
   return async (dispatch: Dispatch<PokAction>) => {
     try {
       dispatch({type: PokACtionType.FETCH_POKEMON})
-      const response =  await axios.get(`http://localhost:8080/pokemons?${type === "All" ? '' : `type_like=${type}`}&_sort=${sort}&_page=${page}&_limit=${limit}`)
+      const response =  await axios.get(`/pokemons?${type === "All" ? '' : `type_like=${type}`}&_sort=${sort}&_page=${page}&_limit=${limit}`)
 
       const totalCount :number = Number(response.headers['x-total-count'])
 
