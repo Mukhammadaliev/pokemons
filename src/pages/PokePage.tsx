@@ -56,9 +56,11 @@ const PokePage: FC = () => {
                 </div>
                 <div className={styles.weaknesses}>
                   <p className={styles.weaknesse}>Weaknesses:</p>
-                  {pokemon.weaknesses &&
+                  <div className={styles.weaknesses_wrapper}>
+                    {pokemon.weaknesses &&
                     (pokemon.weaknesses.map(item => <span className={styles.item_weaknesse}>{item}</span>))
                   }
+                  </div>
                 </div>
               </div>
             </div>

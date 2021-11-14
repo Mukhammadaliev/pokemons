@@ -13,7 +13,7 @@ const Home: FC = () => {
 
   const types = ['All', 'Grass', 'Poison', 'Fire', 'Flying', 'Water', 'Bug', 'Normal', 'Electric', 'Ground', 'Fighting', 'Psychic', 'Rock', 'Ice', 'Ghost', 'Dragon']
 
-  const [limit] = useState<number>(10)
+  const [limit] = useState<number>(12)
   const [paginationPage, setPaginationPage] = useState<number>(1)
 
   const {pokemons, loading, error, totalCount} = useTypeSelector(state => state.pokemons)
